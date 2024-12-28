@@ -29,7 +29,7 @@ jobs:
       
     - name: Naming jar file
       run: |
-        ls ./build/libs
+        rm ./build/libs/app.jar
         mv ./build/libs/*.jar ./build/libs/app.jar
 
     - name: Check jar file
