@@ -209,4 +209,10 @@ fabric.properties
 hs_err_pid*
 replay_pid*
 
+# Ignore Gradle Wrapper files
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij,eclipse,java
