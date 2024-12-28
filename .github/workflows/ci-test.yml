@@ -28,7 +28,9 @@ jobs:
         ./gradlew clean build -x test
       
     - name: Naming jar file
-      run: mv ./build/libs/*.jar ./build/libs/app.jar
+      run: |
+        ls ./build/libs
+        mv ./build/libs/*.jar ./build/libs/app.jar
 
     - name: Check jar file
       run: ls ./build/libs
