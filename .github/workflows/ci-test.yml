@@ -1,6 +1,6 @@
 name: App With Github Actions with docker-compose CI/CD
 
-on: push
+on: workflow_dispatch
 
 jobs:
   ci:
@@ -23,7 +23,9 @@ jobs:
       shell: bash
       
     - name: Build with Gradle
-      run: ./gradlew clean build -x test
+      run: |
+        chmod +x ./gradlew
+        ./gradlew clean build -x test
       
     - name: Naming jar file
       run: mv ./build/libs/*.jar ./build/libs/app.jar
