@@ -2,7 +2,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,eclipse,java
 
 # properties
-*.properties
+application.properties
+cache.properties
+gc.properties
 
 ### Eclipse ###
 .metadata
