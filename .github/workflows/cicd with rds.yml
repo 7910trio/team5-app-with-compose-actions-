@@ -69,13 +69,9 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_PRIVATE_KEY }}
         script: |
-            mysql -u ${{ secrets.RDB_USER }} -p -h ${{ secrets.RDB_INSTANCE }}
-            sudo fuser -k -n tcp 8080 || true
-            docker stop app || true
-            docker rm app || true
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/app-for-cicd-test:latest
-            docker run -d -p 8080:8080 \
-            -e TZ=Asia/Seoul \
-            --name app \
-            ${{ secrets.DOCKERHUB_USERNAME }}/app-for-cicd-test:latest
+            cd
+            sudo docker-compose down
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/app-with-actions
+            sudo docker-compose up -d
+            sudo docker image prune -a -f
     
