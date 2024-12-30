@@ -38,10 +38,5 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-// 실행 가능한 JAR 파일 설정
-tasks.named('bootJar') {
-	archiveBaseName.set('app') // JAR 파일의 기본 이름
-	archiveFileName.set('app.jar') // 최종 JAR 파일 이름
-}
 
 
