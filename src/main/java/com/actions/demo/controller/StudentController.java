@@ -19,8 +19,8 @@ public class StudentController {
     private final StudentRepository studentRepository;
 
     @GetMapping(value = "/test")
-    public ResponseEntity<String> getStudents() {
-        String string = "This is student-demo.";
+    public ResponseEntity<String> forTest() {
+        String string = "This is student-demo-0.0.1.";
         return ResponseEntity.ok(string);
     }
 
