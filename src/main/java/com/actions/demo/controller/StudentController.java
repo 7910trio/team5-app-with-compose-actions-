@@ -20,7 +20,7 @@ public class StudentController {
 
     @GetMapping(value = "/test")
     public ResponseEntity<String> forTest() {
-        String string = "This is student-demo-0.0.2";
+        String string = "This is student-demo-0.0.1.";
         return ResponseEntity.ok(string);
     }
 
