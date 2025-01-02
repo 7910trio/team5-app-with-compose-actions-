@@ -1,6 +1,6 @@
 name: App With Github Actions with docker-compose CI/CD
 
-on: workflow_disptach
+on: workflow_dispatch
 
 jobs:
   ci:
