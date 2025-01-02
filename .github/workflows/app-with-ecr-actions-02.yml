@@ -1,5 +1,5 @@
 name: Build and Push Docker Image To AWS ECR
-on: workflow_dispatch
+on: push
 
 jobs:
   build-push-image:
