@@ -18,6 +18,12 @@ public class StudentController {
 
     private final StudentRepository studentRepository;
 
+    @GetMapping(value = "/test")
+    public ResponseEntity<String> getStudents() {
+        String string = "This is student-demo.";
+        return ResponseEntity.ok(string);
+    }
+
     @GetMapping(value = "/")
     public ResponseEntity<List<StudentDto>> getStudents() {
         List<StudentDto> students = studentRepository.findAll().stream()
@@ -36,7 +42,7 @@ public class StudentController {
         return ResponseEntity.ok(studentDto);
     }
 
-    @PostMapping
+    @PostMapping(value = "/")
     public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto studentDto) {
 
         studentRepository.save(Student.toEntity(studentDto));
