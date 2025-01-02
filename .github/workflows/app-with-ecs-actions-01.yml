@@ -2,7 +2,10 @@ name: User source Deploy to Amazon ECR & ECS
 on:
   push:
     branches:
-      master
+      - master
+  pull_request:
+    branches:
+      - master
   
 env:
   AWS_REGION: ap-northeast-2
