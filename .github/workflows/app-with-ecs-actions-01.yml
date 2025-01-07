@@ -85,7 +85,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: latest
         run: |
-          aws ecs describe-task-definition --task-definition first-task-01 --query taskDefinition > task-definition.json
+          aws ecs describe-task-definition --task-definition first-task-00 --query taskDefinition > task-definition.json
           cat task-definition.json
           echo "task-def-file=task-definition.json" >> $GITHUB_OUTPUT
 
