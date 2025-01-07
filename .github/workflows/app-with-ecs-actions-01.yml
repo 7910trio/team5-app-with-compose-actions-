@@ -10,9 +10,9 @@ on:
 env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: app-with-ecs
-  ECS_SERVICE: first-ecs-service-service-01
-  ECS_CLUSTER: FirstECSCluster01
-  CONTAINER_NAME: first-ecs-container-01
+  ECS_SERVICE: first-ecs-service-00
+  ECS_CLUSTER: FirstCluster00
+  CONTAINER_NAME: first-ecs-container-00
   
 jobs:
   build-deploy:
